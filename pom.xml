@@ -7,6 +7,13 @@
   <artifactId>spring-petclinic</artifactId>
   <version>2.0.0.BUILD-SNAPSHOT</version>
 
+<distributionManagement>
+   <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>http://192.168.33.10:8081/nexus/content/repositories/snapshots</url>
+   </snapshotRepository>
+</distributionManagement>
+
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
@@ -112,7 +119,7 @@
 
   <build>
     <plugins>
-      <plugin>
+	<plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
         <executions>
